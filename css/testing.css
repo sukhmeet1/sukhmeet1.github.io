@@ -1,10 +1,5 @@
-/*----------------------------------Default styling of page-----------------------------------*/
+/*---------------------------Styling of the Nav Bar & Footer----------------------------*/
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #ccccff;
-}
  
 nav ul {
   list-style: none;
@@ -38,7 +33,7 @@ nav a.active {
   cursor: default;
 }
 
-section {
+.flex-item {
 
 	background-color:#ccccff;
 	text-align:left;
@@ -63,8 +58,9 @@ footer {
 	color: white;
 }
 
-/*---------------------------------------------Media Queries---------------------------------------------*/
+/*----------------------------------Media Queries---------------------------------------*/
 
+/* Media queries for Nav bar */
 @media screen and (min-width: 600px) {
   nav li {
     width: 120px;
@@ -73,28 +69,37 @@ footer {
     line-height: 50px;
     font-size: 1.4em;
   }
- 
+
   nav li {
     display: inline-block;
     margin-right: -4px;
   }
- 
 }
 
+/* Media queries for Home page */
 @media screen and (max-width: 599px) {
 	.flex-container {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: column wrap;
+	}
+	
+@media screen and (max-width:599px) {
+	#toronto {
+		width: 100%;
+		height: auto;
 	}
 }
+	
+}
 
-/*------------------------------------Default behaviour of content containers--------------------------------*/
+/*-------------------------------Styling of the Home Page--------------------------------*/
 
 .flex-container{
 	display: flex;
+	flex-flow: column wrap;
 }
 
-.flex-item:nth-child(-n+1) {
+.flex-item {
 	-webkit-order: 0;
 	-ms-flex-order: 0;
 	order: 0;
@@ -106,7 +111,18 @@ footer {
 	align-self: stretch;
 }
 
+/*---------------------------Styling of the Contact Page--------------------------------*/
 
 .contact {
 	text-align: center;
 }
+
+/*----------------------Parallax Styling and Styling of the Background-------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccccff;
+}
+
+/*-----------------------Styling of the Portfolio Page-----------------------*/
